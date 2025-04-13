@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor Search Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #3d68db;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Results for "{{ disease }}"</h2>
+
+  {% if data %}
+  <table>
+    <thead>
+      <tr>
+        <th>Hospital ID</th>
+        <th>Hospital Name</th>
+        <th>Doctor Name</th>
+        <th>Specialization</th>
+        <th>Disease</th>
+        <th>Appointment No.</th>
+        <th>Consultant Fees</th>
+        <th>Location</th>
+        <th>Available Slot</th>
+        <th>Distance</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in data %}
+      <tr>
+        <td>{{ row['H_id'] }}</td>
+        <td>{{ row['H_name'] }}</td>
+        <td>{{ row['D_name'] }}</td>
+        <td>{{ row['Specialization'] }}</td>
+        <td>{{ row['disease'] }}</td>
+        <td>{{ row['Appoitment_num'] }}</td>
+        <td>{{ row['Consultant_fess'] }}</td>
+        <td>{{ row['Location'] }}</td>
+        <td>{{ row['Available_slot'] }}</td>
+        <td>{{ row['Distance'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+    <p>No results found for "{{ disease }}".</p>
+  {% endif %}
+
+</body>
+</html>

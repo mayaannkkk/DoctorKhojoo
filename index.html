@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoctorKhojo</title>
+    <link rel="shortcut icon" href="1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header>
+        <h1 class="logo">DoctorKhojo</h1>
+        <nav class="navigation">
+            <a href="#page1">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#faqs">FAQs</a>
+            <button class="btnSignin-popup">Signin</button>
+            <button class="btnSignup-popup">Signup</button>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+          <h1>Welcome to <strong>DoctorKhojo</strong></h1>
+          <p>Your Health is Our first priority.<br>
+          We find the best doctor for you based on your medical condition.</p>
+        </div>
+      </div>
+      
+
+      <section id="page2" class="parallax">
+        <div class="search-bar-container">
+          <div class="search-bar">
+            <form action="/search" method="POST" class="search-bar">
+                <div class="search-option">
+                  <i class="fas fa-stethoscope"></i>
+                  <input type="text" name="disease" placeholder="Enter Your Disease" required>
+                </div>
+                <button type="submit" class="search-button">
+                  Search <i class="fas fa-search"></i>
+                </button>
+              </form>
+              
+          </div>
+        </div>
+      </section>
+      <div class="map-section">
+        <div class="map-text">
+          <h2>Visit Our Hospital</h2>
+          <p>We’re located across multiple campuses in Greater Noida to serve you better. Come see us for appointments, consultations, or any medical assistance!</p>
+          <ul>
+            <li>Greater Noida Campus: Gautam Buddha University</li>
+            <li>GIMS (Government Institute of Medical Sciences)</li>
+            <li>Sharda Hospital, Knowledge Park III</li>
+            <li>Kailash Hospital, Greater Noida</li>
+            <li>Yatharth Super Specialty Hospital, Omega I</li>
+            <li>Fortis Hospital (Near by Noida Extension)</li>
+          
+          </ul>
+        </div>
+      
+        <div class="map-embed">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d7017.466618031753!2d77.52410119243203!3d28.427303003109373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x390cc0f918abee8d%3A0x8c72169fdd7154b0!2sGautam%20Buddha%20University%2C%20Yamuna%20Expressway%2C%20Greater%20Noida%2C%20Uttar%20Pradesh!3m2!1d28.4209228!2d77.5267391!4m5!1s0x390cc1da6d6644a3%3A0x9b937b9c55be3bbf!2sCGMJ%2B4RP%2C%20Unnamed%20Road%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201310!3m2!1d28.4328367!2d77.5320749!5e0!3m2!1sen!2sin!4v1744511984365!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+          
+    
+    <div class="doctor-section">
+        <div class="text-section">
+          <h1>Are you a <span>doctor</span>?</h1>
+          <ul>
+            <li>Manage appointments and queries</li>
+            <li>Get discovered by new patients</li>
+            <li>Access insights and analytics</li>
+          </ul>
+        </div>
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='threedr.png') }}" alt="Icon 1">
+        </div>
+      </div>
+      
+
+    <section class="info-boxes">
+        <div class="info-box">
+          <div class="info-icon">
+            <img src="{{ url_for('static', filename='icon.png') }}" alt="Icon 1">          </div>
+          <h3>FIND A SPECIALIST</h3>
+          <p>Looking for a cardiologist, dermatologist, or another specialist,Then here you will find it.</p>
+        </div>
+      
+        <div class="info-box">
+          <div class="info-icon">
+            <img src="{{ url_for('static', filename='icon.png') }}" alt="Icon 1">          </div>
+          <h3>BOOK APPOINTMENTS</h3>
+          <p>Book appointments online with ease.</p>
+        </div>
+      
+        <div class="info-box">
+          <div class="info-icon">
+            <img src="{{ url_for('static', filename='icon.png') }}" alt="Icon 1">          </div>
+          <h3>REAL PATIENT REVIEWS</h3>
+          <p>Make informed choices using honest reviews from other patients.</p>
+        </div>
+      </section>
+      
+    <section id="bottom-info">
+        <div class="info-row">
+            <div class="info-box">
+                <h4>Our Services</h4>
+                <ul>
+                    <li>General Consultation</li>
+                    <li>Specialist Referrals</li>
+                    <li>Health Check-ups</li>
+                    <li>Telemedicine</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>About Us</h4><ul></ul>
+                <li>DoctorKhojo is dedicated to providing quality healthcare services to our patients.</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>Contact Us</h4>
+                <ul>
+                <li>Email:contact@doctorkhojo.com</li>
+                <li>Phone: +123 456 7890</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>Frequently Asked Questions</h4>
+                <ul>
+                <li><strong>Q:</strong> What services do you offer?
+                <li><strong>A:</strong> We offer a range of medical services including consultations and health check-ups.</li>
+                <li><strong>Q:</strong> How can I book an appointment?</li>
+                <li><strong>A:</strong> You can book an appointment through our website or by contacting us directly.</li>
+            </ul>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <p>&copy; 2023 DoctorKhojo. All rights reserved.</p>
+    </footer>
+
+    <!-- ===== Scripts ===== -->
+    <script src="login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
